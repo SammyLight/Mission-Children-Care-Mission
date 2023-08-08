@@ -2196,6 +2196,7 @@ a:focus {
 .footer .copyright p {
     margin: 0;
     color: #999999;
+    text-align: center;
 }
 
 .footer .copyright .col-md-6:last-child p {
