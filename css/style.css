@@ -25,7 +25,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: deepskyblue;
+    color: #FDBE33;
     outline: none;
     text-decoration: none;
 }
@@ -37,8 +37,8 @@ a:focus {
     font-weight: 500;
     color: #777777;
     border-radius: 0;
-    border: 2px solid deepskyblue;
-    box-shadow: inset 0 0 0 0 deepskyblue;
+    border: 2px solid #FDBE33;
+    box-shadow: inset 0 0 0 0 #FDBE33;
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
@@ -46,7 +46,7 @@ a:focus {
 
 .btn.btn-custom:hover {
     color: #20212B;
-    box-shadow: inset 0 0 0 30px deepskyblue;
+    box-shadow: inset 0 0 0 30px #FDBE33;
 }
 
 .btn:focus,
@@ -99,7 +99,7 @@ a:focus {
     width: 45px;
     height: 45px;
     border: 5px solid #dddddd;
-    border-top: 5px solid deepskyblue;
+    border-top: 5px solid #FDBE33;
     border-radius: 50%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
@@ -118,7 +118,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: deepskyblue;
+    background: #FDBE33;
     width: 44px;
     height: 44px;
     text-align: center;
@@ -140,7 +140,7 @@ a:focus {
 }
 
 .back-to-top:hover i {
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .col-sm-1 {
@@ -201,7 +201,7 @@ a:focus {
 
 .top-bar .text i {
     font-size: 16px;
-    color: deepskyblue;
+    color: #FDBE33;
     margin-right: 5px;
 }
 
@@ -210,6 +210,9 @@ a:focus {
     font-size: 16px;
     font-weight: 500;
     margin: 0;
+}
+.top-bar .text p a {
+    color: #ffffff;
 }
 
 .top-bar .social {
@@ -226,7 +229,7 @@ a:focus {
     width: 45px;
     height: 100%;
     font-size: 16px;
-    color: deepskyblue;
+    color: #FDBE33;
     border-right: 1px solid rgba(255, 255, 255, .3);
 }
 
@@ -236,7 +239,7 @@ a:focus {
 
 .top-bar .social a:hover {
     color: #ffffff;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 @media (min-width: 992px) {
@@ -264,6 +267,7 @@ a:focus {
 }
 
 .navbar .navbar-brand {
+    display: flex;
     margin: 0;
     color: #ffffff;
     font-size: 45px;
@@ -275,21 +279,63 @@ a:focus {
 
 .navbar .navbar-brand img {
     max-width: 100%;
-    max-height: 40px;
+    max-height: 60px;
 }
-
+.logo-text{
+    display: grid;
+    place-content: center;
+    grid-template-rows: 40% 30%;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-top: 5px;
+}
+.logo-text h6{
+    display: grid;
+    place-content: center;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.logo-text p{
+    display: grid;
+    place-content: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+@media (max-width: 540px) {
+    .navbar .navbar-brand img {
+        max-height: 40px;
+    }
+    .logo-text {
+        grid-template-rows: 50% 40%;
+        letter-spacing: 3px;
+        margin-top: 8px;
+    }
+    .logo-text h6{
+        font-size: 14px;
+    }
+    .logo-text p{
+        font-size: 12px;
+    }
+}
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 15px 8px 15px;
-    padding: 20px 15px 18px 15px;
+    padding: 20px 15px 20px 15px;
     color: #ffffff;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: deepskyblue;
+    color: #FDBE33;
     transition: none;
 }
 
@@ -452,7 +498,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: deepskyblue;
+    color: #FDBE33;
     background: rgba(256, 256, 256, .2);
     font-size: 22px;
     transition: .3s;
@@ -461,7 +507,7 @@ a:focus {
 .carousel .owl-nav .owl-prev:hover,
 .carousel .owl-nav .owl-next:hover {
     color: #ffffff;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .carousel .owl-nav .owl-prev {
@@ -478,7 +524,14 @@ a:focus {
     max-width: 800px;
     margin: 60px auto 0 auto;
 }
-
+.modal-dialog{
+    margin-top: 200px;
+}
+@media (max-width: 540px) {
+    .modal-dialog{
+        margin-top: 150px;
+    }
+}
 #videoModal .modal-body {
     position: relative;
     padding: 0px;
@@ -553,8 +606,29 @@ a:focus {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.page-header-contact{
+.page-header-about{
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.page-header-event{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.page-header-blog{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.page-header-contact{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -567,10 +641,17 @@ a:focus {
     background-position: center;
     background-attachment: fixed;  
 }
+.page-header-team{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/facts.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+}
 
 .page-header h2 {
     position: relative;
-    color: deepskyblue;
+    color: #FDBE33;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -584,7 +665,7 @@ a:focus {
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .page-header a {
@@ -595,7 +676,7 @@ a:focus {
 }
 
 .page-header a:hover {
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .page-header a::after {
@@ -658,7 +739,7 @@ a:focus {
     font-size: 22px;
     font-weight: 600;
     text-transform: capitalize;
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .section-header h2 {
@@ -720,9 +801,9 @@ a:focus {
 
 .about .about-tab .nav.nav-pills .nav-link:hover,
 .about .about-tab .nav.nav-pills .nav-link.active {
-    color: deepskyblue;
+    color: #FDBE33;
     padding-bottom: 7px;
-    border-bottom: 3px solid deepskyblue;
+    border-bottom: 3px solid #FDBE33;
 }
 
 .about .about-tab .tab-content {
@@ -767,7 +848,7 @@ a:focus {
 .service .service-icon i {
     position: relative;
     display: block;
-    color: deepskyblue;
+    color: #FDBE33;
     font-size: 60px;
     line-height: 60px;
     margin-top: 5px;
@@ -796,7 +877,7 @@ a:focus {
     height: 40px;
     top: calc(50% - 20px);
     left: -1px;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .service .service-text h3 {
@@ -821,7 +902,7 @@ a:focus {
     background: rgba(0, 0, 0, .5);
 }
 .overlay {
-    background: rgba(0,0,0,0.80);
+    background: rgba(0,0,0,0.50);
 }
 .donate .donate-content {
     padding: 45px 0 15px 0;
@@ -851,7 +932,7 @@ a:focus {
 
 .donate .donate-form {
     padding: 90px 30px;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .donate .donate-form .control-group {
@@ -894,7 +975,7 @@ a:focus {
 
 .donate .donate-form .btn.btn-custom:hover,
 .donate .donate-form .btn.btn-custom.active {
-    color: deepskyblue;
+    color: #FDBE33;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
 }
@@ -952,7 +1033,7 @@ a:focus {
 .causes .progress .progress-bar {
     position: relative;
     width: 0px;
-    background: deepskyblue;
+    background: #FDBE33;
     overflow: visible;
     transition: 2s;
 }
@@ -964,7 +1045,7 @@ a:focus {
     height: 23px;
     display: inline-block;
     padding: 2px 6px;
-    background: deepskyblue;
+    background: #FDBE33;
     color: #20212B;
 }
 
@@ -976,7 +1057,7 @@ a:focus {
     top: 23px;
     left: calc(50% - 6px);
     border: 6px solid;
-    border-color: deepskyblue transparent transparent transparent;
+    border-color: #FDBE33 transparent transparent transparent;
 }
 
 .causes .progress-text {
@@ -1015,14 +1096,83 @@ a:focus {
 
 .causes .causes-btn .btn:last-child {
     color: #20212B;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .causes .causes-btn .btn:last-child:hover {
     color: #ffffff;
 }
 
+/*******************************/
+/********** Residence CSS **********/
+/*******************************/
+.residence-img {
+    /* position: relative;
+    width: 100%;
+    min-height: 620px;
+    margin: 45px 0;
+    display: flex;
+    align-items: center; */
+}
+.residence-img img{
+    width: 100vw;
+}
+/*******************************/
+/********** Sponsors CSS **********/
+/*******************************/
+.sponsors .sponsors-container {
+margin-bottom: 60px;
+}
+.flex{
+    display: flex;
+}
+.sponsors .sponsors-img {
+    align-self: center;
+    width: 100%;
+}
+.sponsors .sponsors-img img{
+    width: 100%;
+}
+.sponsors .sponsors-text{
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.sponsors .sponsors-text h3{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.sponsors .sponsors-text p{
+    margin: 0;
+    font-size: 20px;
+}
 
+@media (max-width: 768px) {
+    .sponsors .sponsors-container {
+        margin-bottom: 30px;
+    }
+    .sponsors .sponsors-text {
+        /* max-width: 90%; */
+        margin: 20px auto 0 auto;
+    }
+    .order1 {
+        order: 2;
+    }
+    .order2 {
+        order: 1;
+    }
+}
+@media (max-width: 540px) {
+    .sponsors .sponsors-text h3{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .sponsors .sponsors-text p{
+        font-size: 18px;
+    }
+}
 
 /*******************************/
 /********** Facts CSS **********/
@@ -1047,7 +1197,7 @@ a:focus {
     margin-top: 10px;
     font-size: 60px;
     line-height: 60px;
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .facts .facts-text {
@@ -1156,13 +1306,13 @@ a:focus {
     text-align: center;
     font-size: 14px;
     color: #4a4c70;
-    border: 2px solid deepskyblue;
+    border: 2px solid #FDBE33;
     transition: .3s;
 }
 
 .team .team-social a:hover {
     color: #20212B;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .team .team-item:hover .team-text {
@@ -1237,7 +1387,7 @@ a:focus {
     width: 12px;
     height: 12px;
     border-radius: 0;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .testimonial .owl-dot.active {
@@ -1282,7 +1432,7 @@ a:focus {
 
 .volunteer .volunteer-form {
     padding: 90px 30px;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .volunteer .volunteer-form .control-group {
@@ -1323,11 +1473,18 @@ a:focus {
 }
 
 .volunteer .volunteer-form .btn.btn-custom:hover {
-    color: deepskyblue;
+    color: #FDBE33;
     border: 1px solid #ffffff;
     box-shadow: inset 0 0 0 30px #ffffff;
 }
-
+@media (max-width: 992px) {
+    .volunteer .order1 {
+        order: 2;
+    }
+    .volunteer .order2 {
+        order: 1;
+    }
+}
 
 /*******************************/
 /********** Event CSS **********/
@@ -1398,7 +1555,7 @@ a:focus {
     height: 40px;
     top: calc(50% - 20px);
     left: -1px;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .event .event-text h3 {
@@ -1488,7 +1645,7 @@ a:focus {
 }
 
 .blog .blog-text h3 a:hover {
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .blog .blog-text p {
@@ -1508,6 +1665,9 @@ a:focus {
     padding: 0 30px;
     border-right: 1px solid rgba(0, 0, 0, .15);
 }
+.blog .blog-meta p a{
+    cursor: pointer;
+}
 
 .blog .blog-meta p:first-child {
     padding-left: 0;
@@ -1522,7 +1682,6 @@ a:focus {
     color: #4a4c70;
     margin-right: 8px
 }
-
 .blog .pagination {
     margin-bottom: 15px;
 }
@@ -1535,7 +1694,7 @@ a:focus {
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: deepskyblue;
+    color: #FDBE33;
     background: #4a4c70;
 }
 
@@ -1564,15 +1723,18 @@ a:focus {
     object-fit: cover;
 }
 .contact-container {
-    display: flex;
-    display: grid;
-    grid-template-columns: 47% 6% 47%;
+    display: block;
     max-width: 90%;
     background: #f3f6ff;
     margin: 0 auto;
     margin-top: -220px;
     padding: 30px;
     position: relative;
+}
+.contact-container-display {
+    display: grid;
+    grid-template-columns: 47% 6% 47%;
+
 }
 .line{
     /* border-left: 0.2px solid rgba(0, 0, 0, .3); */
@@ -1584,6 +1746,9 @@ a:focus {
 }
 .contact-info p {
     font-size: 130%;
+}
+.contact-info p a{
+    color: #777777;;
 }
 .contact-info p i {
     width: 25px;
@@ -1600,7 +1765,7 @@ a:focus {
 }
 
 @media (max-width: 991.98px) {
-    .contact-container {
+    .contact-container-display {
         display: block;
     }
     .line{
@@ -1686,8 +1851,8 @@ a:focus {
 
 .single .single-tags a:hover {
     color: #ffffff;
-    background: deepskyblue;
-    border-color: deepskyblue;
+    background: #FDBE33;
+    border-color: #FDBE33;
 }
 
 .single .single-bio {
@@ -1765,7 +1930,7 @@ a:focus {
 }
 
 .single .post-item .post-text a:hover {
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .single .post-item .post-meta {
@@ -1807,14 +1972,14 @@ a:focus {
     align-items: center;
     justify-content: center;
     color: #4a4c70;
-    background: deepskyblue;
+    background: #FDBE33;
     font-size: 16px;
     transition: .3s;
 }
 
 .single .related-slider .owl-nav .owl-prev:hover,
 .single .related-slider .owl-nav .owl-next:hover {
-    color: deepskyblue;
+    color: #FDBE33;
     background: #4a4c70;
 }
 
@@ -1880,7 +2045,7 @@ a:focus {
 }
 
 .single .comment-text .btn:hover {
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .single .comment-form {
@@ -1909,7 +2074,7 @@ a:focus {
 
 .single .comment-form input:focus,
 .single .comment-form textarea:focus {
-    border-color: deepskyblue;
+    border-color: #FDBE33;
 }
 
 
@@ -1947,7 +2112,7 @@ a:focus {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: deepskyblue;
+    background: #FDBE33;
 }
 
 .sidebar .sidebar-widget .search-widget {
@@ -1962,7 +2127,7 @@ a:focus {
 
 .sidebar .search-widget input:focus {
     box-shadow: none;
-    border-color: deepskyblue;
+    border-color: #FDBE33;
 }
 
 .sidebar .search-widget .btn {
@@ -1972,7 +2137,7 @@ a:focus {
     height: 40px;
     padding: 0;
     font-size: 25px;
-    color: deepskyblue;
+    color: #FDBE33;
     background: none;
     border-radius: 0;
     border: none;
@@ -1993,13 +2158,13 @@ a:focus {
 
 .sidebar .tab-post .nav.nav-pills .nav-link {
     color: #4a4c70;
-    background: deepskyblue;
+    background: #FDBE33;
     border-radius: 0;
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link:hover,
 .sidebar .tab-post .nav.nav-pills .nav-link.active {
-    color: deepskyblue;
+    color: #FDBE33;
     background: #4a4c70;
 }
 
@@ -2040,7 +2205,7 @@ a:focus {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: deepskyblue;
+    color: #FDBE33;
     left: 1px;
 }
 
@@ -2067,8 +2232,8 @@ a:focus {
 
 .single .tag-widget a:hover {
     color: #ffffff;
-    background: deepskyblue;
-    border-color: deepskyblue;
+    background: #FDBE33;
+    border-color: #FDBE33;
 }
 
 .sidebar .image-widget {
@@ -2111,7 +2276,7 @@ a:focus {
     margin-bottom: 30px;
     font-size: 22px;
     font-weight: 700;
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 .footer .footer-link a {
@@ -2130,7 +2295,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: deepskyblue;
+    color: #FDBE33;
     letter-spacing: 1px;
 }
 .footer-img{
@@ -2142,6 +2307,9 @@ a:focus {
 }
 .footer .footer-contact p i {
     width: 25px;
+}
+.footer .footer-contact p a {
+    color: #FFFFFF;
 }
 
 .footer .footer-social {
@@ -2208,7 +2376,7 @@ a:focus {
 }
 
 .footer .copyright p a:hover {
-    color: deepskyblue;
+    color: #FDBE33;
 }
 
 @media (max-width: 767.98px) {
