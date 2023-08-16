@@ -29,6 +29,16 @@ a:focus {
     outline: none;
     text-decoration: none;
 }
+.flex{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .grid{
+        display: grid;
+        place-content: center;
+    }
+}
 
 .btn.btn-custom {
     padding: 12px 20px;
@@ -158,7 +168,20 @@ a:focus {
     flex: 0 0 100%;
     max-width: 100%;
 }
-
+@media (max-width: 768px){ 
+    .col-sm-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+@media (max-width: 400px){ 
+    .col-sm-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
 /**********************************/
 /********** Top Bar CSS ***********/
 /**********************************/
@@ -613,12 +636,19 @@ a:focus {
     background-position: center;
     background-attachment: fixed;
 }
-.page-header-event{
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-2.jpg);
+.page-header-gallary{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/Children-being-served-meal.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+}
+.page-header-event{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/Chilren-with-medical-team-group-of-hope-givers-union.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
 }
 .page-header-blog{
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-3.jpg);
@@ -821,6 +851,105 @@ a:focus {
     }
 }
 
+/*******************************/
+/********** Gallary CSS **********/
+/*******************************/
+.gallary {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+.gallary .container {
+    width: 100%;
+}
+
+.gallary .col-md-4, .gallary .col-md-3 {
+    margin: 0;
+    padding: 0;
+}
+
+.gallary-thumb img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.gallary-thumb:hover img {
+    transform: scale(1.15);
+}
+
+.gallary .gallary-thumb {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 102%;
+}
+
+.gallary-thumb .gallary-info {
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: left;
+    padding: 25px 30px;
+    transition: 0.5s 0.2s;
+}
+
+.gallary-info .gallary-item {
+    float: left;
+}
+
+.gallary-info .gallary-price {
+    float: right;
+}
+
+.gallary-info .gallary-price span {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    display: block;
+    margin-top: 10px;
+}
+
+.gallary-thumb .gallary-info h3,
+.gallary-thumb .gallary-info p,
+.gallary-thumb .gallary-info span {
+    transform: translateY(100%);
+    opacity: 0;
+    display: block;
+    transition: 0.5s 0.2s;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+
+.gallary-thumb .gallary-info h3 {
+    margin-top: 0;
+}
+
+.gallary-thumb .gallary-info p {
+    color: #d9d9d9;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gallary-thumb:hover .gallary-info h3,
+.gallary-thumb:hover .gallary-info p,
+.gallary-thumb:hover .gallary-info span {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.gallary-thumb:hover .gallary-info {
+    background: rgba(0,0,0,0.8);
+}
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 /*******************************/
 /********* Service CSS *********/
@@ -1122,9 +1251,6 @@ a:focus {
 /*******************************/
 .sponsors .sponsors-container {
 margin-bottom: 60px;
-}
-.flex{
-    display: flex;
 }
 .sponsors .sponsors-img {
     align-self: center;
@@ -1567,10 +1693,16 @@ margin-bottom: 60px;
 .event .event-text p {
     margin: 0;
 }
-
-.event .btn.btn-custom {
-    margin-top: 20px;
+.home-ul{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.justify-content-center .nav-item .home-link{
+    /* margin-top: 20px; */
     padding: 8px 30px;
+    color: #fff;
+    background-color: #FDBE33;
 }
 
 @media (max-width: 575.98px) {
@@ -1691,17 +1823,30 @@ margin-bottom: 60px;
     border-radius: 0;
     border-color: #4a4c70;
 }
-
+.blog .nav-justified .nav-item {
+    flex-grow: 0;
+}
+.blog .tab-content>.active {
+    display: flex;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #007bff;
+    background-color: #FDBE33;
+}
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
     color: #FDBE33;
     background: #4a4c70;
 }
-
 .blog .pagination .disabled .page-link {
     color: #999999;
 }
-
+@media (max-width: 991.98px) {
+    .blog .tab-content>.active {
+        display: block;
+    }
+}
 
 /*******************************/
 /********* Contact CSS *********/
