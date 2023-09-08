@@ -1249,7 +1249,7 @@ a:focus {
 /*******************************/
 /********** Sponsors CSS **********/
 /*******************************/
-.sponsors .sponsors-container {
+/* .sponsors .sponsors-container {
 margin-bottom: 60px;
 }
 .sponsors .sponsors-img {
@@ -1280,7 +1280,6 @@ margin-bottom: 60px;
         margin-bottom: 30px;
     }
     .sponsors .sponsors-text {
-        /* max-width: 90%; */
         margin: 20px auto 0 auto;
     }
     .order1 {
@@ -1298,6 +1297,38 @@ margin-bottom: 60px;
     .sponsors .sponsors-text p{
         font-size: 18px;
     }
+} */
+
+.sponsors .sponsors-container {
+    position: relative;
+    /* margin-bottom: 35px; */
+}
+.sponsors .sponsors-img {
+    position: relative;
+    overflow: hidden;
+}
+.sponsors .sponsors-img img {
+    width: 100%;
+    transform: scale(1.1);
+    margin-bottom: -15px;
+    transition: .3s;
+}
+.sponsors .sponsors-text {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 96px;
+    bottom: 0;
+    left: 20px;
+    padding: 22px 0;
+    text-align: center;
+    background: #ffffff;
+    transition: .3s;
+    overflow: hidden;
+}
+.sponsors .sponsors-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 /*******************************/
